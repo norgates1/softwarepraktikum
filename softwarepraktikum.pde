@@ -1,4 +1,4 @@
-String phase = "start";
+String phase = "menu";
 
 Menu menu;
 Game game;
@@ -6,10 +6,13 @@ Game game;
 void setup() {
     size(1024,768,P2D);
     noCursor();
+    background(0);
+
 
     menu = new Menu();
     game = new Game();
 
+    loadFonts();
 }
 
 void draw() {
@@ -20,6 +23,8 @@ void draw() {
     if (phase == "game") {
         game.display();
     }
+
+
 }
 
 void keyPressed() {
